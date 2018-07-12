@@ -27,11 +27,17 @@ public class Main {
                 f.add(my);
 
                 my.addActionListener((e)-> {
-                    my.setBackground(Color.BLUE);
-                    if(enemy.getBackground()==(Color.GREEN))
+                    if((enemy.getBackground()==(Color.GREEN))||(my.getBackground()==(Color.yellow))) {
                         enemy.setBackground(Color.RED);
-                    else
-                        enemy.setBackground(Color.BLUE);
+                        my.setBackground(Color.yellow);
+                    }
+                    else {
+                        if (my.getBackground()!=(Color.yellow))
+                        {
+                            enemy.setBackground(Color.BLUE);
+                            my.setBackground(Color.BLUE);
+                        }
+                    }
                 });
 
 
