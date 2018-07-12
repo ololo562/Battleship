@@ -16,8 +16,9 @@ public class Main {
                 f.add(enemy);
 
                 enemy.addActionListener((e)-> {
-                    if(enemy.getBackground()!=(Color.BLUE))
-                    enemy.setBackground(Color.GREEN);
+                    if((enemy.getBackground()!=(Color.BLUE))&&(enemy.getBackground()!=(Color.RED))) {
+                        enemy.setBackground(Color.GREEN);
+                    }
                 });
 
 //my starts
